@@ -22,36 +22,46 @@
 		<h3>Customize search</h3>
 
 		<form>		
-			<h4>Adopted</h4>
-			<input type="checkbox" name="no" value="no"> No
-			<input type="checkbox" name="yes" value="yes"> Yes
+			<label>
+				<h4>Adopted</h4>
+				<input type="checkbox" name="no" value="no"> No
+				<input type="checkbox" name="yes" value="yes"> Yes
+			</label>
 			
-			<h4>Color</h4>
-			<select>
-				<option value="black">Black</option>
-				<option value="white">White</option>
-				<option value="beige">Beige</option>
-				<option value="brown">Brown</option>
-				<option value="mix">Mix</option>
-			</select>
+			<label><h4>Color</h4>
+				<select>
+					<option value="black">Black</option>
+					<option value="white">White</option>
+					<option value="beige">Beige</option>
+					<option value="brown">Brown</option>
+					<option value="mix">Mix</option>
+				</select>
+			</label>
+			<label>
+				<h4>Gender</h4>
+				<input type="checkbox" name="male" value="male"> Male
+				<input type="checkbox" name="female" value="female"> Female
+			</label>
 
-			<h4>Gender</h4>
-			<input type="checkbox" name="male" value="male"> Male
-			<input type="checkbox" name="female" value="female"> Female
+			<label>
+				<h4>Age (years)</h4>
+				From <input type="number" name="fromAge" min="1" max="15">
+				To <input type="number" name="toAge" min="1" max="15">
+			</label>
 
-			<h4>Age (years)</h4>
-			From <input type="number" name="fromAge" min="1" max="15">
-			To <input type="number" name="toAge" min="1" max="15">
+			<label>
+				<h4>Size (kg)</h4>
+				From <input type="number" name="fromSize" min="1" max="150">
+				To <input type="number" name="toSize" min="1" max="150">
+			</label>
 
-			<h4>Size (kg)</h4>
-			From <input type="number" name="fromSize" min="1" max="150">
-			To <input type="number" name="toSize" min="1" max="150">
-
-			<h4>Good with</h4>
-			<input type="checkbox" name="children" value="children"> Children
-			<input type="checkbox" name="foreigners" value="foreigners"> Foreigners
-			<input type="checkbox" name="dogs" value="dogs"> Dogs
-			<input type="checkbox" name="cats" value="cats"> Cats
+			<label>
+				<h4>Good with</h4>
+				<input type="checkbox" name="children" value="children"> Children
+				<input type="checkbox" name="foreigners" value="foreigners"> Foreigners
+				<input type="checkbox" name="dogs" value="dogs"> Dogs
+				<input type="checkbox" name="cats" value="cats"> Cats
+			</label>
 
 			<input type="submit" value="Submit">
 		</form>	
