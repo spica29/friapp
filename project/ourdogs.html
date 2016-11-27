@@ -1,117 +1,94 @@
-<title>
+<!doctype html>
+	<head>
+		<title>Animal shelter PAW -Home</title>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			@import 'css/nav.css';
+			@import 'css/asideSearch.css';
+			@import 'css/customizeSearch.css';
+			@import 'css/ourDogs.css';
+		</style>
+		<script type="text/javascript" src="js/loadDog.js"></script>
+		<noscript><h2>Your browser does not support JavaScript!!!</h2></noscript>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a class="active" href="ourdogs.html">Our dogs</a></li>
+				<li><a href="howtohelp.html">How to help</a></li>
+				<li><a href="stories.html">Stories</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="login.html">Login</a></li>
+			</ul>
+		</nav>
 
-</title>
-<body>
+		<header><img src="images/header-masterhead.jpg" alt="coverImage"></header>
 
-	<header><h1>Dog shelter PAW</h1></header>
-	
-	<nav>
-		<ul>
-			<a href="#">Home</a>
-			<a href="#">Our dogs</a>
-			<a href="#">How to help</a>
-			<a href="#">Stories</a>
-			<a href="#">Contact</a>
-			<a href="#">Login</a>
-		</ul>
-	</nav>
-
-
-	<aside>
-
-		<h3>Customize search</h3>
-
-		<form>		
-			<label>
-				<h4>Adopted</h4>
-				<input type="checkbox" name="no" value="no"> No
-				<input type="checkbox" name="yes" value="yes"> Yes
-			</label>
-			
-			<label><h4>Color</h4>
-				<select>
-					<option value="black">Black</option>
-					<option value="white">White</option>
-					<option value="beige">Beige</option>
-					<option value="brown">Brown</option>
-					<option value="mix">Mix</option>
-				</select>
-			</label>
-			<label>
-				<h4>Gender</h4>
-				<input type="checkbox" name="male" value="male"> Male
-				<input type="checkbox" name="female" value="female"> Female
-			</label>
-
-			<label>
-				<h4>Age (years)</h4>
-				From <input type="number" name="fromAge" min="1" max="15">
-				To <input type="number" name="toAge" min="1" max="15">
-			</label>
-
-			<label>
-				<h4>Size (kg)</h4>
-				From <input type="number" name="fromSize" min="1" max="150">
-				To <input type="number" name="toSize" min="1" max="150">
-			</label>
-
-			<label>
-				<h4>Good with</h4>
-				<input type="checkbox" name="children" value="children"> Children
-				<input type="checkbox" name="foreigners" value="foreigners"> Foreigners
-				<input type="checkbox" name="dogs" value="dogs"> Dogs
-				<input type="checkbox" name="cats" value="cats"> Cats
-			</label>
-
-			<input type="submit" value="Submit">
-		</form>	
-	</aside>
-
-	<section>
+		<aside>
+			<h2>Customize search</h2>
+			<form>		
+				<label>
+					Adopted
+					<input type="checkbox" name="no" value="no"> No
+					<input type="checkbox" name="yes" value="yes"> Yes
+				</label>
+				</br>
+				<label>
+					Color
+					<select>
+						<option value="black">Black</option>
+						<option value="white">White</option>
+						<option value="beige">Beige</option>
+						<option value="brown">Brown</option>
+						<option value="mix">Mix</option>
+					</select>
+				</label>
+				<br>
+				<label>
+					Gender
+					<input type="checkbox" name="male" value="male"> Male
+					<input type="checkbox" name="female" value="female"> Female
+				</label>
+				<br>
+				<label>
+					Age (years)
+					<br>From <input type="number" name="fromAge" min="1" max="15">
+					<br>To <input type="number" name="toAge" min="1" max="15">
+				</label>
+				<br>
+				<label>
+					Size (kg)
+					<br>From <input type="number" name="fromSize" min="1" max="150">
+					<br>To <input type="number" name="toSize" min="1" max="150">
+				</label>
+				</br>
+				<label>
+					Good with:
+					<br><input type="checkbox" name="children" value="children"> Children
+					<br><input type="checkbox" name="foreigners" value="foreigners"> Foreigners
+					<br><input type="checkbox" name="dogs" value="dogs"> Dogs
+					<br><input type="checkbox" name="cats" value="cats"> Cats
+				</label>
+				<br>
+				<input type="submit" value="Search">
+			</form>	
+		</aside>
 		<!-- filter -->
-		<form>
-			<h4>Sort by</h4>
+		<form id="sort">
+			Sort by
 			<select>
 				<option value="dateSort">Date</option>
 				<option value="ageSort">Age</option>
 				<option value="sizeSort">Size</option>
 			</select>
 		</form>
+		<section id="section">
+			<!-- dogs -->
+			<!-- load from loadDog.js -->
+		</section>
 
-		<article>
-			<figure><img src="" alt="image"></figure>
-			<h2>Name of dog</h2>
-			<p>Breed: Mix</p>
-			<p>Gender: female</p>
-			<p>Color: black</p>
-			<p>Age: 2 years</p>
-			<p>Size: 10kg</p>
-			<p>Good with: kids, dogs</p>
-		</article>
+		<footer></footer>
 
-		<article>
-			<figure><img src="" alt="image"></figure>
-			<h2>Name of dog</h2>
-			<p>Breed: Mix</p>
-			<p>Gender: male</p>
-			<p>Color: brown</p>
-			<p>Age: 5 years</p>
-			<p>Size: 20kg</p>
-			<p>Good with: kids, dogs, cats, foreigners</p>
-		</article>
-
-		<article>
-			<figure><img src="" alt="image"></figure>
-			<h2>Name of dog</h2>
-			<p>Breed: Mix</p>
-			<p>Gender: female</p>
-			<p>Color: black</p>
-			<p>Age: 2 years</p>
-			<p>Size: 3kg</p>
-			<p>Good with: kids, cats</p>
-		</article>
-	</section>
-
-	<footer></footer>
-
-</body>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+aside {
+	float: left;
+	display: inline-block;
+	border: 1 solid black;
+	background-color: #f1f1f1;
+	width: 20%;
+	overflow: hidden;
+	margin: 2% 5% 2% 0%;
+	padding: 2%;
+}
+
+/*minimizing padding*/
+@media all and (min-width: 1050px){
+	aside{
+		float: left;
+		display: block;
+		width: 15%;
+	}
+}
+
+/*minimizing padding*/
+@media all and (min-width: 900px){
+	aside{
+		float: left;
+		display: block;
+		width: 30%;
+	}
+}
+
+/*minimizing padding*/
+@media all and (max-width: 900px){
+	aside{
+		float: left;
+		display: block;
+		width: 50%;
+	}
+}
+
+/*for smaller screens (mobile)*/
+@media all and (max-width: 550px){
+	aside{
+		display: block;
+		width: 90%;
+		margin: 5px;
+	}
+}

@@ -1,0 +1,41 @@
+aside {
+	float: right;
+	display: inline-block;
+	border: 1 solid black;
+	background-color: #f1f1f1;
+	width: 20%;
+	overflow: hidden;
+	margin: 2% 5% 2% 0%;
+	padding: 2%;
+}
+
+.donateImg {
+	margin: 0 auto;
+	width: 100%;
+}
+
+/*minimizing padding*/
+@media all and (max-width: 900px){
+	aside{
+		float: right;
+		word-wrap: break-word;
+		display: block;
+	}
+
+	.donateImg {
+		width: 80px;
+	}
+}
+
+/*for smaller screens (mobile)*/
+@media all and (max-width: 550px){
+	aside{
+		display: block;
+		width: 90%;
+		margin: 5px;
+	}
+
+	.donateImg {
+		width: 40%;
+	}
+}

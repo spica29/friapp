@@ -1,0 +1,24 @@
+article {
+	display: inline-block;
+	width: 26%;
+	background-color: #f1f1f1;
+	border: 1 solid black;
+	margin: 2%;
+	float: right;
+}
+
+article img {
+	width: 80%;
+	padding: 10%;
+	height: 300px;
+}
+
+.dogInfo {
+	margin: 20px;
+}
+
+#sort {
+	float: right;
+	margin-right: 10%;
+	font-size: 20px;
+}

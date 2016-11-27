@@ -1,0 +1,20 @@
+article {
+	float: left;
+	display: inline-block;
+	top: -60px;
+	border: 1 solid black;
+	background-color: #f1f1f1;
+	width: 50%;
+	overflow: hidden;
+	margin: 2% 1% 2% 5%;
+	padding: 2%;
+}
+/*for smaller screens (mobile)*/
+@media all and (max-width: 550px){
+	article{
+		float: none;
+		display: block;
+		width: 90%;
+		margin: 8px;
+	}
+}
