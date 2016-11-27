@@ -1,7 +1,6 @@
 aside {
 	float: right;
-	display: inline-block;
-	border: 1 solid black;
+	display: block;
 	background-color: #f1f1f1;
 	width: 20%;
 	overflow: hidden;

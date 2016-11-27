@@ -3,11 +3,21 @@ article {
 	display: inline-block;
 	top: -60px;
 	background-color: #f1f1f1;
-	width: 50%;
+	width: 60%;
 	overflow: hidden;
 	margin: 2% 1% 2% 5%;
 	padding: 2%;
+	font-size: 20px;
 }
+
+#story{
+	font-size: 18px;
+}
+
+article img {
+	padding: 0% 15%;
+}
+
 /*for smaller screens (mobile)*/
 @media all and (max-width: 550px){
 	article{
@@ -18,13 +28,21 @@ article {
 	}
 }
 
+input{
+    width: 100%;    
+    background-color: #ED8804;
+    padding: 7px 10px;
+    font-size: 20px;
+    margin: 2%;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
 iframe {
 	width: 560px;
 	height: 315px;
-}
-
-#map {
-	width: 600px;
-	border: 0;
-	height: 450px;
+	border:none;
+	overflow:hidden;
 }

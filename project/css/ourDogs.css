@@ -1,16 +1,29 @@
 article {
 	display: inline-block;
-	width: 26%;
+	width: 46%;
 	background-color: #f1f1f1;
-	border: 1 solid black;
 	margin: 2%;
+}
+
+section {
+	width: 70%;
 	float: right;
 }
 
 article img {
 	width: 80%;
 	padding: 10%;
-	height: 300px;
+	min-height: 600px;
+
+  -webkit-transition: all 0,3s ease;
+     -moz-transition: all 0,3s ease;
+       -o-transition: all 0,3s ease;
+      -ms-transition: all 0,3s ease;
+          transition: all 0,3s ease;
+}
+
+article img:hover {
+  -webkit-filter: opacity(0.6);	
 }
 
 .dogInfo {
@@ -21,4 +34,25 @@ article img {
 	float: right;
 	margin-right: 10%;
 	font-size: 20px;
+}
+
+/*for smaller screens */
+@media all and (max-width: 900px){
+	section {
+		float: left;
+		width: 100%;
+	}
+}
+
+
+/*for smaller screens (mobile)*/
+@media all and (max-width: 550px){
+	section {
+		float: left;
+		width: 100%;
+	}
+
+	article {
+		width: 100%;
+	}
 }

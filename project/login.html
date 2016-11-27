@@ -1,58 +1,54 @@
-<title>
+<!doctype html>
+	<head>
+		<title>Animal shelter PAW - Login</title>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			@import 'css/nav.css';
+			@import 'css/article.css';
+			@import 'css/aside.css';
+			@import 'css/login.css';			
+		</style>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="ourdogs.html">Our dogs</a></li>
+				<li><a href="howtohelp.html">How to help</a></li>
+				<li><a href="stories.html">Stories</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a class="active" href="login.html">Login</a></li>
+			</ul>
+		</nav>
 
-</title>
-<body>
-	<header><h1>Dog shelter PAW</h1></header>
+		<header><img src="images/header-masterhead.jpg" alt="coverImage"></header>
 
-	<nav>
-		<ul>
-			<a href="#">Home</a>
-			<a href="#">Our dogs</a>
-			<a href="#">How to help</a>
-			<a href="#">Stories</a>
-			<a href="#">Contact</a>
-			<a href="#">Login</a> 
-		</ul>
-	</nav>
-
-	<figure><img src="" alt="image"></figure>
-
-	<section>
 		<article>
 			<h2>Login</h2>
 			
 			<form>
-				<label>
-					Email
-					<input type="email" name="email"> 
-				</label>
-
-				<label>
-					Password
-					<input type="password" name="password"> 
-				</label>
-				<a href="#">Forgot my password</a>
+				<p><label for="email">Email</label></p>
+					<input type="email" id="email" name="email">
+				<br>
+				<p><label for="password">Password</label></p>
+					<input type="password" id="password" name="password"> 
+				
+				<br><a href="#"><p>Forgot my password</p></a>
 
 				<input type="submit" value="Login">
 			</form>
+
+			<h3>New member? Register here!</h3>
+			<form action="register.html" method="get"><input type="submit" value="Register"></form>
 		</article>	
 
-		<h3>New member? Register here!</h3>
-		<form><input type="submit" value="Register"></form>
-	</section>
+		<aside class="adds">
+			<h3>Add</h3>
+			<img src="images/add.jpg" alt="donateImg" class="donateImg">
+			<p>Visit Zoo center on this <a target="_blank" 	href="http://zoo-centar.com/">link</a></p>
+		</aside>
 
-	<aside>
-		<article>
-			<h3>Adds</h3>
+		<footer></footer>
 
-			<figure><img src="" alt="image"></figure>
-
-			<p>Cum et omnes possit abhorreant, aeque eirmod sensibus ad eum. His at impetus omittantur, elitr verear praesent per ut. An mea melius quaestio antiopam, esse vidisse noluisse et pro, pro senserit dissentiunt ut. Usu quaeque lucilius interesset no, ex sit praesent appellantur, ei quas scripta mel. Ei soluta complectitur mei.</p>
-
-			<p>Est ipsum dolorem temporibus id, cu aliquid singulis per. Quo ex accusam vituperatoribus, ut animal laoreet molestie nam. Ea eam quem ferri lorem, no ullum nemore fuisset est. Altera alienum voluptaria at qui, ei pri sint autem, fugit praesent urbanitas ut vix. Ut sed dolor suavitate, ne sit dicant maiorum suscipit. Vel possim vivendum legendos et, novum utinam platonem vim eu, splendide efficiantur ea cum.</p>
-		</article>
-	</aside>
-
-	<footer></footer>
-
-</body>
+	</body>
+</html>

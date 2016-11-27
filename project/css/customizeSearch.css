@@ -1,12 +1,21 @@
-label, input {
-	margin: 5% 0%;
+label, input, select {
+	margin: 4% 4%;
 }
 
-input, select {
-	margin-left: 30px;
+label {
+	width: 50%;
+	font-size: 20px;
 }
 
-input[type=submit] {
+input[type=number], #color {   
+    padding: 3px 5px;
+ 	width: 80%;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+input[type=button] {
     width: 100%;    
     background-color: #ED8804;
     color: white;
@@ -31,7 +40,10 @@ aside {
 /*for smaller screens (mobile)*/
 @media all and (max-width: 550px){
 	label{
-		font-size: 20px;
+		font-size: 18px;
+	}
+	input, select {
+		margin: 4% 10%;
 	}
 	input, select {
 		width: 100px;

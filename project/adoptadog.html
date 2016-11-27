@@ -1,25 +1,31 @@
-<title>
+<!doctype html>
+	<head>
+		<title>Animal shelter PAW - Adopt a dog</title>
+		<meta charset="utf-8" />
+		<style type="text/css">
+			@import 'css/nav.css';
+			@import 'css/aside.css';
+			@import 'css/dog.css';
+		</style>
+		<script type="text/javascript" src="js/adopt.js"></script>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a class="active" href="ourdogs.html">Our dogs</a></li>
+				<li><a href="howtohelp.html">How to help</a></li>
+				<li><a href="stories.html">Stories</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="login.html">Login</a></li>
+			</ul>
+		</nav>
 
-</title>
-<body>
-	<header><h1>Dog shelter PAW</h1></header>
-
-	<nav>
-		<ul>
-			<a href="#">Home</a>
-			<a href="#">Our dogs</a>
-			<a href="#">How to help</a>
-			<a href="#">Stories</a>
-			<a href="#">Contact</a>
-			<a href="#">Profile</a> <!-- user is logged in -->
-		</ul>
-	</nav>
-
-	<h1>Name of dog<img src="" alt="image"></h1>
-
-	<section>
-		<article>
-			<h2>Name of dog</h2>
+		<header><img src="images/header-masterhead.jpg" alt="coverImage"></header>
+		
+		<article id="dogArticle">
+			<h2>Tina</h2>
+			<img src="images/stella.jpg" alt="dogImage">
 			
 			<p>Breed: Mix</p>
 			<p>Gender: female</p>
@@ -28,24 +34,20 @@
 			<p>Size: 3kg</p>
 			<p>Good with: kids, cats</p>
 
-			<form><input type="submit" value="Adopt"></form>
-
 			<p>Details about adopter</p>
-			<p>Lorem ipsum dolor sit amet, ut habeo senserit usu, per ad doctus cetero. In mutat tractatos pri, vim no homero definitiones, at nam quas veritus abhorreant. Pro ad malis adolescens, id vel sale altera. Ei menandri disputationi vis, his at quas saepe hendrerit, est decore molestiae democritum ea. Pri te corpora senserit maiestatis, ei ferri animal mei. Everti reformidans pri in, in exerci altera suscipiantur vix.</p>
+			<p>Details from logged user.</p>
 			
-			<form><input type="submit" value="Adopt"></form>
+			<form><input type="button" value="Adopt" onclick="adopt()"></form>
 		</article>	
-		
-	</section>
 
-	<aside>
-		<h3>Adds</h3>
+		<aside class="adds">
+			<h3>Add</h3>
+			<img src="images/add.jpg" alt="donateImg" class="donateImg">
+			<p>Visit Zoo center on this <a target="_blank" 	href="http://zoo-centar.com/">link</a></p>
+		</aside>
 
-		<p>Cum et omnes possit abhorreant, aeque eirmod sensibus ad eum. His at impetus omittantur, elitr verear praesent per ut. An mea melius quaestio antiopam, esse vidisse noluisse et pro, pro senserit dissentiunt ut. Usu quaeque lucilius interesset no, ex sit praesent appellantur, ei quas scripta mel. Ei soluta complectitur mei.</p>
+		<footer></footer>
 
-		<p>Est ipsum dolorem temporibus id, cu aliquid singulis per. Quo ex accusam vituperatoribus, ut animal laoreet molestie nam. Ea eam quem ferri lorem, no ullum nemore fuisset est. Altera alienum voluptaria at qui, ei pri sint autem, fugit praesent urbanitas ut vix. Ut sed dolor suavitate, ne sit dicant maiorum suscipit. Vel possim vivendum legendos et, novum utinam platonem vim eu, splendide efficiantur ea cum.</p>
-	</aside>
+	</body>
 
-	<footer></footer>
-
-</body>
+</html>
