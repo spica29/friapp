@@ -1,0 +1,6 @@
+express
+jade - templating engine
+morgan -
+mysql - sql-based relational db
+sequelize - ORM
+less

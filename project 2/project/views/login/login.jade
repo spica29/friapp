@@ -1,0 +1,22 @@
+extends ../layout
+
+block login
+  link(rel='stylesheet', href='/stylesheets/article.css')
+  link(rel='stylesheet', href='/stylesheets/login.css')
+  article
+    h2 Login !{email1}
+    form(action='/login', method='post')
+      p
+        label(for='email') Email
+      input#email(type='email', name='email', required='')
+      br
+      p
+        label(for='password') Password
+      input#password(type='password', name='password', required='')
+      br
+      a(href='#')
+        p Forgot my password
+      input(type='submit', value='Login')
+    h3 New member? Register here!
+    form(action='/register', method='get')
+      input(type='submit', value='Register')

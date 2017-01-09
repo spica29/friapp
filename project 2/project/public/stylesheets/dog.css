@@ -1,0 +1,49 @@
+article {
+	display: inline-block;
+	width: 46%;
+	background-color: #f1f1f1;
+	margin: 2%;
+}
+
+section {
+	width: 70%;
+	float: right;
+}
+
+article img {
+	width: 100%;
+	outline: none;
+	padding: 10%;
+	min-height: 20px;
+}
+
+.dogInfo {
+	margin: 20px;
+}
+
+#sort {
+	float: right;
+	margin-right: 10%;
+	font-size: 20px;
+}
+
+/*for smaller screens */
+@media all and (max-width: 900px){
+	section {
+		float: left;
+		width: 100%;
+	}
+}
+
+
+/*for smaller screens (mobile)*/
+@media all and (max-width: 550px){
+	section {
+		float: left;
+		width: 100%;
+	}
+
+	article {
+		width: 100%;
+	}
+}

@@ -1,0 +1,50 @@
+extends ../layout
+
+block ourdogs 
+	link(rel='stylesheet', href='/stylesheets/asideSearch.css')
+	aside
+		h2 Customize search
+		form(action='/ourdogs',method='post')
+			.input-group
+				label(for='adopted', value="Adopted") Adopted 
+				br
+				input#adopted(type='checkbox', name='no', value='no', placeholder='no') 
+				| No
+				input(type='checkbox', name='yes', value='yes') 
+				| Yes
+			.form-group
+				label(for='color', value="Color") Color
+				br
+				select#color
+					option#all(value='all') All
+					option#mix(value='mix') Mix
+					option#white(value='white') White 
+					option#beige(value='beige') Beige
+					option#brown(value='brown') Brown
+					option#black(value='black') Black
+			.form-group
+				label(for='gender', value="Gender") Gender
+				br
+				input(type='checkbox', name='male', value='male')
+				| Male
+				input(type='checkbox', name='female', value='female')
+				| Female
+			.form-group
+				label(for='age', value="Age (years)") Age (years)
+					label(for='fromAge')
+					input#fromAge(type='number', name='fromAge', min='1', max='15')
+					label(for='toAge', value="To")
+					input#toAge(type='number', name='toAge', min='1', max='15')
+			.form-group
+				label(for='size', value="Size (kg)") Size (kg)
+					label(for='fromSize')
+					input#fromSize(type='number', name='fromSize', min='1', max='150')
+					label(for='toSize', value="To")
+					input#toSize(type='number', name='toSize', min='1', max='150')
+			input(type='submit', value="Search") 
+	section#section
+		h2 Our dogs
+		// dogs
+		// load from loadDog.js
+
+		include ../dog/dog

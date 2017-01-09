@@ -1,0 +1,24 @@
+extends ../layout
+
+block register
+    link(rel='stylesheet', href='/stylesheets/login.css')
+    article
+      h2 Register
+      form(action='/register', method='post')
+        label(for='email') Email
+        br
+        input(type='email', name='email')
+        br
+        label(for='password') Password
+        br
+        input(type='password', name='password')
+        br
+        label(for='confirmPW') Confirm password
+        br
+        input(type='password', name='confpassword')
+        br
+        br
+        input(type='submit', value='Register')
+      h3 Old member? Login here!
+      form(action='login.html', method='get')
+        input(type='submit', value='Login')
