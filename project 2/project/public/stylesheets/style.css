@@ -26,3 +26,9 @@
         line-height: 1.4;
     }
 }
+
+.table-responsive {
+    margin-top: 80px;
+    margin-right: 2%;
+    margin-left: 2%;
+}

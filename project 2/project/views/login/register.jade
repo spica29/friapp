@@ -7,16 +7,22 @@ block register
       form(action='/register', method='post')
         label(for='email') Email
         br
-        input(type='email', name='email')
+        input(type='email', name='email', required=true)
+        br
+        label(for='username') Username
+        br
+        input(type='text', name='username', required=true)
         br
         label(for='password') Password
         br
-        input(type='password', name='password')
+        input(type='password', name='password', required=true)
         br
         label(for='confirmPW') Confirm password
         br
-        input(type='password', name='confpassword')
+        input(type='password', name='confpassword', required=true)
         br
+        -if(message)
+            p #{message}
         br
         input(type='submit', value='Register')
       h3 Old member? Login here!

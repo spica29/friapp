@@ -1,0 +1,9 @@
+extends ../layout
+
+block profile
+    link(rel='stylesheet', href='/stylesheets/article.css')
+    article
+      img(src = userProfile.image, alt= userProfile.firstName)
+      .dogInfo
+        h3#nameOfUser !{userProfile.firstName} !{userProfile.lastName}
+

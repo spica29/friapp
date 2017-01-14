@@ -1,21 +1,13 @@
 block dog
   link(rel='stylesheet', href='/stylesheets/dog.css')
-  article.dog
-    img(src='images/jovana.jpg', alt='Jovana dog')
-    .dogInfo
-      h3#nameOfDog Jovana
-      p.breed Mix
-      p.gender female
-      p.color beige
-      p.age 5 years
-      p.size 10 kg
-  article.dog
-    img(src='images/jovana.jpg', alt='Jovana dog')
-    .dogInfo
-      h3#nameOfDog Jovana
-      p.breed Mix
-      p.gender female
-      p.color beige
-      p.age 5 years
-      p.size 10 kg
-
+  each dog in dogs
+    article.dog
+      a(href='dog/' + dog.id)
+        img(src=dog.image, alt=dog.name)
+      .dogInfo
+        h3#nameOfDog !{dog.name}
+        p.breed !{dog.breed}
+        p.gender !{dog.gender}
+        p.color !{dog.color}
+        p.age !{dog.age} years
+        p.size !{dog.size} kg

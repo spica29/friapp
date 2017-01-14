@@ -1,11 +1,11 @@
 article {
 	float: left;
 	display: inline-block;
-	top: -60px;
+	position: relative;
 	background-color: #f1f1f1;
 	width: 80%;
 	overflow: hidden;
-	margin: 2% 1% 2% 5%;
+	margin: 60px 1% 2% 5%;
 	padding: 2%;
 }
 /*for smaller screens (mobile)*/

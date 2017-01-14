@@ -17,6 +17,7 @@ db.Dog = Dog;
 db.Donation = Donation;
 db.Employee = Employee;
 db.Story = Story;
+db.connection = connection;
 
 //relations
 Object.keys(db).forEach(function(modelName) {

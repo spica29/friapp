@@ -4,7 +4,7 @@ block login
   link(rel='stylesheet', href='/stylesheets/article.css')
   link(rel='stylesheet', href='/stylesheets/login.css')
   article
-    h2 Login !{email1}
+    h2 Login
     form(action='/login', method='post')
       p
         label(for='email') Email
@@ -14,8 +14,7 @@ block login
         label(for='password') Password
       input#password(type='password', name='password', required='')
       br
-      a(href='#')
-        p Forgot my password
+      br
       input(type='submit', value='Login')
     h3 New member? Register here!
     form(action='/register', method='get')

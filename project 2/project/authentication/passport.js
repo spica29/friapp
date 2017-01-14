@@ -1,7 +1,7 @@
 'use strict'
 
 var LocalStrategy = require('passport-local').Strategy;
-
+var acl = require('../authentication/acl');
 var User = require('../models').User;
 
 // expose this function to our app using module.exports
@@ -14,6 +14,7 @@ module.exports = function (passport) {
 
   // used to serialize the user for the session
   passport.serializeUser(function (user, done) {
+    console.log("serialize" + user);
     done(null, user.id);
   });
 
@@ -34,42 +35,64 @@ module.exports = function (passport) {
       // by default, local strategy uses username and password, we will override with email
       usernameField : 'email',
       passwordField : 'password',
-      passReqToCallBack: true
+      passReqToCallback: true
     },
     function(req, email, password, done) {
       // find a user whose email is the same as the forms email
       // we are checking to see if the user trying to login already exists
-      process.nextTick(function() {
-        User.find({ where: { 'email': email } }).then(function (user, error) {
-            // if there are any errors, return the error
-            //check password
-            if (err){
-              return done(null, false, console.log(err));
-            }
-            // check to see if theres already a user with that email
-            if (user) {
-                return done(null, false, { message:'That email is already taken.'});
-            } else {
-                // if there is no user with that email
-                // create the user
-                User.create({
-                              'email': email,
-                              'password_digest': password
-                            })
-                            .then(function(user) {
-                                    return done(null, user);
-                            })
-                            .catch(function(err) {
-                                console.log("ERR");
-                                return done(null, err);
-                            });
-                if(user){
-                  return done(null, false);
-                }
-            }
+      console.log("usao");
+      User.find({ where: { 'email': email } }).then(function (user, err) {
+        // if there are any errors, return the error
+        //check password
+        var validator = require("email-validator");
+ 
+        ; // true 
+        if(!validator.validate(email)) {
+          return done(null, false, { message: req.flash('message', "Bad email")});
+        }
+        if(req.body.password != req.body.confpassword) {
+          return done(null, false, { message: req.flash('message', "Passwords don't match")});
+        }
 
-        })
-      });
+        if (err){
+          return done(null, false, console.log(err));
+        }
+        // check to see if theres already a user with that email
+        if (user) {
+            return done(null, false, { message: req.flash('message', 'That email is already taken.')});
+        } else {
+            //check username
+            console.log("JEDAN");
+            User.find({ where: { 'username': req.body.username }}).then(function(sameUsername, err){
+              //if there is someone with username return
+                console.log("DVA");
+                if(sameUsername){
+                  return done(null, false, { message: req.flash('message', 'Username taken.')});
+                }
+                //not the same username
+                else{
+                  console.log("TRi");
+                  // if there is no user with that email
+                  // create the user
+                  User.create({
+                                'email': email,
+                                'password_digest': password,
+                                'username': req.body.username
+                              })
+                              .then(function(user) {
+                                      acl.addUserRoles(user.username, 'user');
+                                      return done(null, user, { message: req.flash('message', '')});
+                              })
+                              .catch(function(err) {
+                                  return done(null, err);
+                              });
+                  if(user){
+                    return done(null, false);
+                  }
+                }
+            })                
+        }
+      })
     }));   
 
 

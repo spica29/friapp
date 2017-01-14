@@ -1,0 +1,22 @@
+extends ../layout
+
+block dogadopt
+    article
+        h2#nameOfDog !{dog.name}
+        input(type='hidden', name=dogid, value=dog.id)
+        img(src = dog.image, alt = dog.name)
+        p Breed: !{dog.breed}
+        p Gender: !{dog.gender}
+        p Color: !{dog.color}
+        p Age: !{dog.age} years
+        p Size: !{dog.size} kg
+        p Good with: kids, cats
+        if (username)  
+            form(action='/dog/' + dog.id, method='post')
+                input(type='submit', value='Adopt')
+        else
+            p You can adopt this dog after 
+                a(href='/login') logging in
+        h2#story My story
+        p !{dog.story}
+        iframe(src='https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2F100008813591998%2Fvideos%2F1618833921753712%2F&show_text=0&width=560', allowfullscreen='')

@@ -9,12 +9,8 @@ var sequelize = require('./models/index.js');
 var less = require('less');
 var passport = require('passport')  
 var expressSession = require('express-session');
-
-var index = require('./routes/index');
-var users = require('./routes/users');
-
-
 var app = express();
+var flash = require('connect-flash');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,19 +21,15 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser('mySecretKey'));
+app.use(expressSession({secret: 'mySecretKey'})); 
 app.use(express.static(path.join(__dirname, 'public')));
-
-require('./authentication/passport.js')(passport);
-
-//app.use('/', index);
-//app.use('/users', users);
-
+app.use(flash());
 //PASSPORT
+require('./authentication/passport.js')(passport);
 app.use(passport.initialize())  
 app.use(passport.session());
-app.use(expressSession({secret: 'mySecretKey'})); 
-require('./routes/index.js')(app, passport);
+require('./routes/index.js')(app, passport, flash);
 //---------
 
 // catch 404 and forward to error handler

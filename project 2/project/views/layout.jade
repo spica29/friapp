@@ -11,7 +11,40 @@ html
     script( src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js' )
     script( src='//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js' )
     
-    include menu/menu 
+    nav.navbar.navbar-default.navbar-fixed-top( role="navigation" )
+        .navbar-header
+            button.navbar-toggle.collapsed( type="button", data-toggle="collapse", data-target="#navbar-inverse", aria-expanded="false", aria-controls="navbar")
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+            a.navbar-brand(href="#") Animal shelter Paw
+        #navbar-inverse.collapse.navbar-collapse
+            ul.nav.navbar-nav
+                li(class=title=='Home' || ''?'active':undefined): a( href="/") Home
+                li(class=title=='Our dogs'?'active':undefined): a( href="/ourdogs" ) Our dogs
+                li(class=title==('Volunteer' || 'Donate' || 'Foster')?'active':undefined).dropdown
+                    a.dropdown-toggle( href="#", data-toggle="dropdown", aria-expanded='false') How to help 
+                        span.caret
+                    ul.dropdown-menu( role="menu" )
+                        li: a( href="/volunteer" ) Volunteer
+                        li: a( href="/donate" ) Donate
+                        li: a( href="/foster" ) Foster
+                li(class=title=='Stories'?'active':undefined): a( href="/stories" ) Stories
+                li(class=title=='Contact'?'active':undefined): a( href="/contact" ) Contact
+                if (username) 
+                    li(class=title==('Edit profile' || 'Profile' || 'Log out')?'active':undefined).dropdown
+                        a.dropdown-toggle( href="#", data-toggle="dropdown", aria-expanded='false') Profile 
+                            span.caret
+                        ul.dropdown-menu( role="menu" )
+                            li: a( href="/editProfile" ) Edit profile
+                            li: a( href="/profile" ) Profile
+                            li: a( href="/logout" ) Log out
+                else  
+                    li(class=title=='Login'?'active':undefined): a( href="/login" ) Login
+                if(username)
+                    if(username.username == 'admin')
+                        li(class=title=='Admin'?'active':undefined): a( href="/admin" ) Admin
 
     block content
 
@@ -30,3 +63,11 @@ html
     block story
 
     block register
+
+    block profile
+
+    block dogadopt
+
+    block editProfile
+
+    block admin

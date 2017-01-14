@@ -1,0 +1,22 @@
+extends ../layout
+
+block admin
+    .table-responsive
+      table.table.table-hover
+        tr 
+          th ID
+          th Username
+          th Email
+          th First name
+          th Last name
+          th Action
+        each user in users
+            tr 
+              td.userID !{user.id}
+              td !{user.username}
+              td !{user.email}
+              td !{user.firstName}
+              td !{user.lastName}
+              td 
+                form(action='/admin/delete/'+user.id, method='post')
+                    button.btn.btn-danger(type='submit', name="deleteUser") Delete
