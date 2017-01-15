@@ -6,10 +6,17 @@
     "start": "node ./bin/www",
     "test": "mocha --timeout 10000"
   },
+  "keywords": [
+    "node",
+    "heroku"
+  ],
+  "author": "Amela",
+  "engines": {
+    "node": "5.2.0"
+  },
   "dependencies": {
     "acl": "^0.4.9",
     "acl-sequelize": "^0.1.2",
-    "bcrypt-nodejs": "0.0.3",
     "body-parser": "~1.15.2",
     "bootstrap": "^4.0.0-alpha.6",
     "chai": "^3.5.0",
@@ -21,7 +28,6 @@
     "express": "~4.14.0",
     "express-session": "^1.14.2",
     "jade": "~1.11.0",
-    "less": "^2.7.2",
     "mocha": "^3.2.0",
     "morgan": "~1.7.0",
     "mysql": "^2.12.0",

@@ -7,7 +7,7 @@ var acl = require('../authentication/acl');
 
 module.exports = function(app, logger) {
   app.get('/ourdogs', function(req, res) {
-    models.Dog.findAll().then(function(dogs) {
+    models.Dog.findAll({ where: { adopted: 0 } }).then(function(dogs) {
       if (dogs == null) logger.error("No dogs in database");
       else logger.info("GET all dogs request")
       res.render('ourdogs/ourdogs', { 
@@ -47,7 +47,7 @@ module.exports = function(app, logger) {
             .then(function(user){
               models.Dog.findOne({ where: { id: req.params.id} })
                 .then(function(dog){
-                  dog.updateAttributes({ UserId: user.id });
+                  dog.updateAttributes({ UserId: user.id, adopted: 1 });
                 })
             })
             .then(function(user){

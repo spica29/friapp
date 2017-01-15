@@ -64,5 +64,22 @@
 {"level":"info","message":"GET request login","timestamp":"4:00:08 PM"}
 {"level":"info","message":"GET request REGISTER","timestamp":"4:00:09 PM"}
 {"level":"info","message":"GET request REGISTER","timestamp":"4:00:36 PM"}
-{"level":"info","message":"GET request login","timestamp":"4:54:03 PM"}
-{"level":"info","message":"GET all dogs request","timestamp":"4:54:07 PM"}
+{"level":"info","message":"GET request login","timestamp":"4:58:04 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"4:58:06 PM"}
+{"level":"info","message":"Get dog by id 1 route","timestamp":"4:58:12 PM"}
+{"level":"info","message":"Request GET volunteer","timestamp":"4:58:18 PM"}
+{"level":"info","message":"Request GET contact","timestamp":"4:58:19 PM"}
+{"level":"info","message":"GET request login","timestamp":"4:58:20 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"7:39:08 PM"}
+{"level":"info","message":"Get dog by id 2 route","timestamp":"7:39:11 PM"}
+{"level":"info","message":"GET request login","timestamp":"7:39:13 PM"}
+{"level":"info","message":"GET request login","timestamp":"7:39:17 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"7:39:22 PM"}
+{"level":"info","message":"Get dog by id 2 route","timestamp":"7:39:23 PM"}
+{"level":"info","message":"User amela has adopter a dog with id 2","timestamp":"7:39:25 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"7:39:28 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"7:39:46 PM"}
+{"level":"info","message":"Get dog by id 3 route","timestamp":"7:39:49 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"7:50:10 PM"}
+{"level":"info","message":"GET request login","timestamp":"7:50:13 PM"}
+{"level":"info","message":"GET request login","timestamp":"7:50:16 PM"}
