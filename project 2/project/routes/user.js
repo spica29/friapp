@@ -95,11 +95,24 @@ module.exports = function(app, logger) {
         if(allowed) {
           models.User.findOne({ where: {username: req.user.username} })
           .then(function(profile){
-            console.log("profile " + profile.username);
-            res.render('profile/profile', { 
-              title: 'Profile', 
-              userProfile: profile 
-            })})
+            //finding adopted dogs
+            models.Dog.findAll({where: { UserId: profile.id }})
+            .then(function(dogs){
+              if(dogs == null) 
+              {
+                res.render('profile/profile', { 
+                  title: 'Profile', 
+                  userProfile: profile
+                })
+              }else {
+                res.render('profile/profile', { 
+                  title: 'Profile', 
+                  userProfile: profile,
+                  dogs: dogs
+                })
+              }              
+            })
+          })
           .catch(function(errors) {
             console.log("Error", errors);
             res.render('dashboard', {successFlash: successFlash, errors: errors});

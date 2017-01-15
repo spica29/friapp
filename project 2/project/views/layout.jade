@@ -42,8 +42,9 @@ html
                             li: a( href="/logout" ) Log out
                 else  
                     li(class=title=='Login'?'active':undefined): a( href="/login" ) Login
+                
                 if(username)
-                    if(username.username == 'admin')
+                    if(username == 'admin' || username.username == "admin")
                         li(class=title=='Admin'?'active':undefined): a( href="/admin" ) Admin
 
     block content

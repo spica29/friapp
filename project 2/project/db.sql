@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `wpdb` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `wpdb`;
 -- MySQL dump 10.13  Distrib 5.7.9, for Win64 (x86_64)
 --
 -- Host: localhost    Database: wpdb
@@ -41,7 +39,7 @@ CREATE TABLE `Dog` (
   PRIMARY KEY (`id`),
   KEY `UserId` (`UserId`),
   CONSTRAINT `dog_ibfk_1` FOREIGN KEY (`UserId`) REFERENCES `User` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -50,7 +48,7 @@ CREATE TABLE `Dog` (
 
 LOCK TABLES `Dog` WRITE;
 /*!40000 ALTER TABLE `Dog` DISABLE KEYS */;
-INSERT INTO `Dog` VALUES (1,0,'Jovana','Good with: kids, cats','Mix','Mix',1,15,NULL,'female',NULL,'https://7068-presscdn-0-62-pagely.netdna-ssl.com/wp-content/uploads/2013/08/Stray_dog.jpg',1),(2,0,'Paulina','Good with: kids, cats','Mix','Mix',1,20,NULL,'female',NULL,'http://www.labradorretrieverguide.com/wp-content/uploads/2015/12/What-To-Do-When-You-See-A-Stray-Dog.jpg',1),(3,0,'Nella','Good with: kids, cats','black','Mix',2,3,'Meet lovely Nella! (beginning of video)When Nelson was kicked and his eye was injured to total loss I had to engage in rescue operation at night.I discovered that the same man who kicked Nelson also kicked one of his sisters and she was found nearby the location by another girl with the same situation, again loss of an eye.It was impossible to get Ella and the puppies to safe as the man who was kicking them did not let us take them. He was out of control and saying they are better on the street and breeding and he will give them to some shepherds in his village. Ella and her puppies were rescued although the man took revenge and stole the dogs that the girl who was feeding them had in her yard.We discovered he was really a hoarder. we thought that we got all of them but then the girl spotted that man again and one very similar puppy to Nelsons was following him. She previously had been in a psychical fight with him so she laid low as I advised her that man is dangerous and that she should not show that we discovered the last puppy was taken by him. After months (just as time for heat approached) he let the puppy out back on the street and naturally she came to the bushes where she was born.The girl informed me without making any noise and we secretly lead her away from there with some food and as soon as we were safe to get her we grabbed her and put her in the car together safely and immediately made appointment and took her to be sterilized as we did not know if that horrible man will appear from somewhere around the corner and claim the dog from us.Now she is done and safe and never going back there. We gave her a name Nella after Nelson and Ella the mother. She is ready to travel - as are all the other dogs there.','female',NULL,'images/stella.jpg',NULL);
+INSERT INTO `Dog` VALUES (1,1,'Jovana','Good with: kids, cats','Mix','Mix',1,15,NULL,'female',NULL,'https://7068-presscdn-0-62-pagely.netdna-ssl.com/wp-content/uploads/2013/08/Stray_dog.jpg',1),(2,1,'Paulina','Good with: kids, cats','Mix','Mix',1,20,NULL,'female',NULL,'http://www.labradorretrieverguide.com/wp-content/uploads/2015/12/What-To-Do-When-You-See-A-Stray-Dog.jpg',1),(3,0,'Olli','Good with: kids, cats','black','Mix',2,3,'Meet lovely Nella! (beginning of video)When Nelson was kicked and his eye was injured to total loss I had to engage in rescue operation at night.I discovered that the same man who kicked Nelson also kicked one of his sisters and she was found nearby the location by another girl with the same situation, again loss of an eye.It was impossible to get Ella and the puppies to safe as the man who was kicking them did not let us take them. He was out of control and saying they are better on the street and breeding and he will give them to some shepherds in his village. Ella and her puppies were rescued although the man took revenge and stole the dogs that the girl who was feeding them had in her yard.We discovered he was really a hoarder. we thought that we got all of them but then the girl spotted that man again and one very similar puppy to Nelsons was following him. She previously had been in a psychical fight with him so she laid low as I advised her that man is dangerous and that she should not show that we discovered the last puppy was taken by him. After months (just as time for heat approached) he let the puppy out back on the street and naturally she came to the bushes where she was born.The girl informed me without making any noise and we secretly lead her away from there with some food and as soon as we were safe to get her we grabbed her and put her in the car together safely and immediately made appointment and took her to be sterilized as we did not know if that horrible man will appear from somewhere around the corner and claim the dog from us.Now she is done and safe and never going back there. We gave her a name Nella after Nelson and Ella the mother. She is ready to travel - as are all the other dogs there.','female',NULL,'https://scontent.flju2-1.fna.fbcdn.net/v/t1.0-9/15391176_1280665208740276_7238935825019720985_n.jpg?oh=70eed631476de5734fd92a5344865307&oe=58DE72CD',NULL),(4,0,'Nelly','Good with: kids, dogs','Mix','Mix',2,5,NULL,'male',NULL,'https://scontent.flju2-1.fna.fbcdn.net/v/t1.0-9/15542335_1283176658489131_6922946444054519868_n.jpg?oh=a2d578a5bc42d88494ae2d4aa29f294b&oe=5916408F',NULL),(5,0,'Caesar',NULL,'White','Mix',3,8,NULL,'male',NULL,'https://scontent.flju2-1.fna.fbcdn.net/v/t1.0-9/15492579_1283019491838181_7406965655003638695_n.jpg?oh=e4618d1b9ba088e9ccf347818c18efdc&oe=5918BFF4',NULL),(6,0,'Lillo',NULL,'White','Mix',1,4,NULL,'male',NULL,'https://scontent.flju2-1.fna.fbcdn.net/v/t1.0-9/15326568_1280663198740477_3423009196372922633_n.jpg?oh=9492ec93c6e22433b7b05142fc3514a5&oe=591B0459',NULL);
 /*!40000 ALTER TABLE `Dog` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -157,7 +155,7 @@ CREATE TABLE `User` (
   UNIQUE KEY `user_email_username` (`email`,`username`),
   KEY `EmployeeId` (`EmployeeId`),
   CONSTRAINT `user_ibfk_1` FOREIGN KEY (`EmployeeId`) REFERENCES `Employee` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -166,7 +164,7 @@ CREATE TABLE `User` (
 
 LOCK TABLES `User` WRITE;
 /*!40000 ALTER TABLE `User` DISABLE KEYS */;
-INSERT INTO `User` VALUES (1,'amela','amela.spica@gmail.com','123','Amela','Špica','http://www.freeiconspng.com/uploads/woman-icon-8.png',NULL),(4,'admin','admin@admin.com','a','Admin',NULL,'http://interworldgems.com/client_login/admin/images/login_icon.png',NULL),(10,'amela.spica@gmail.com','as7849@student.uni-lj.sia','123',NULL,NULL,NULL,NULL),(12,'as29','as7849@student.uni-lj.si','a','New','User','https://cdn0.iconfinder.com/data/icons/user-pictures/100/female-512.png',NULL),(13,'assada','amela.spica@gmsail.com','123',NULL,NULL,NULL,NULL);
+INSERT INTO `User` VALUES (1,'amela','amela.spica@gmail.com','123','Amela','Špica','http://www.freeiconspng.com/uploads/woman-icon-8.png',NULL),(4,'admin','admin@admin.com','a','Admin',NULL,'http://interworldgems.com/client_login/admin/images/login_icon.png',NULL),(10,'amela.spica@gmail.com','as7849@student.uni-lj.sia','123',NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `User` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -192,7 +190,7 @@ CREATE TABLE `acl_meta` (
 
 LOCK TABLES `acl_meta` WRITE;
 /*!40000 ALTER TABLE `acl_meta` DISABLE KEYS */;
-INSERT INTO `acl_meta` VALUES ('roles','[\"admin\",\"user\"]','2017-01-10 09:43:59','2017-01-14 15:57:50'),('users','[4,\"admin\",\"amela\",\"as29\",\"assada\"]','2017-01-10 09:43:58','2017-01-14 15:57:50');
+INSERT INTO `acl_meta` VALUES ('roles','[\"admin\",\"user\"]','2017-01-10 09:43:59','2017-01-15 21:19:39'),('users','[4,\"admin\",\"amela\",\"as29\",\"assada\",\"assadaw\",\"a\"]','2017-01-10 09:43:58','2017-01-15 21:20:08');
 /*!40000 ALTER TABLE `acl_meta` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -243,7 +241,7 @@ CREATE TABLE `acl_permissions` (
 
 LOCK TABLES `acl_permissions` WRITE;
 /*!40000 ALTER TABLE `acl_permissions` DISABLE KEYS */;
-INSERT INTO `acl_permissions` VALUES ('allows_admin','{\"admin\":[\"view\"]}','2017-01-11 18:10:11','2017-01-14 15:57:50'),('allows_ourdogs','{\"admin\":[\"view\"]}','2017-01-10 09:43:59','2017-01-11 18:09:21'),('allows_profile','{\"user\":[\"view\",\"edit\"],\"admin\":[\"view\",\"edit\"]}','2017-01-10 20:59:19','2017-01-14 15:57:50');
+INSERT INTO `acl_permissions` VALUES ('allows_admin','{\"admin\":[\"view\"]}','2017-01-11 18:10:11','2017-01-15 21:19:39'),('allows_ourdogs','{\"admin\":[\"view\"]}','2017-01-10 09:43:59','2017-01-11 18:09:21'),('allows_profile','{\"user\":[\"view\",\"edit\"],\"admin\":[\"view\",\"edit\"]}','2017-01-10 20:59:19','2017-01-15 21:19:39');
 /*!40000 ALTER TABLE `acl_permissions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -269,7 +267,7 @@ CREATE TABLE `acl_resources` (
 
 LOCK TABLES `acl_resources` WRITE;
 /*!40000 ALTER TABLE `acl_resources` DISABLE KEYS */;
-INSERT INTO `acl_resources` VALUES ('admin','[\"ourdogs\",\"profile\",\"admin\"]','2017-01-10 09:43:59','2017-01-14 15:57:50'),('user','[\"profile\"]','2017-01-10 20:59:19','2017-01-14 15:57:50');
+INSERT INTO `acl_resources` VALUES ('admin','[\"ourdogs\",\"profile\",\"admin\"]','2017-01-10 09:43:59','2017-01-15 21:19:39'),('user','[\"profile\"]','2017-01-10 20:59:19','2017-01-15 21:19:39');
 /*!40000 ALTER TABLE `acl_resources` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -295,7 +293,7 @@ CREATE TABLE `acl_roles` (
 
 LOCK TABLES `acl_roles` WRITE;
 /*!40000 ALTER TABLE `acl_roles` DISABLE KEYS */;
-INSERT INTO `acl_roles` VALUES ('admin','[4,\"admin\"]','2017-01-10 09:43:59','2017-01-14 15:57:50'),('user','[\"amela\",\"as29\",\"assada\"]','2017-01-10 20:59:19','2017-01-14 15:57:50');
+INSERT INTO `acl_roles` VALUES ('admin','[4,\"admin\"]','2017-01-10 09:43:59','2017-01-15 21:19:39'),('user','[\"amela\",\"as29\",\"assada\",\"assadaw\",\"a\"]','2017-01-10 20:59:19','2017-01-15 21:20:08');
 /*!40000 ALTER TABLE `acl_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -321,7 +319,7 @@ CREATE TABLE `acl_users` (
 
 LOCK TABLES `acl_users` WRITE;
 /*!40000 ALTER TABLE `acl_users` DISABLE KEYS */;
-INSERT INTO `acl_users` VALUES ('4','[\"admin\"]','2017-01-10 09:43:59','2017-01-10 20:14:53'),('admin','[\"admin\"]','2017-01-10 20:25:41','2017-01-14 15:57:50'),('amela','[\"user\"]','2017-01-10 20:59:19','2017-01-14 15:57:50'),('as29','[\"user\"]','2017-01-11 19:41:42','2017-01-11 19:41:42'),('assada','[\"user\"]','2017-01-14 14:25:06','2017-01-14 14:25:06');
+INSERT INTO `acl_users` VALUES ('4','[\"admin\"]','2017-01-10 09:43:59','2017-01-10 20:14:53'),('a','[\"user\"]','2017-01-15 21:20:08','2017-01-15 21:20:08'),('admin','[\"admin\"]','2017-01-10 20:25:41','2017-01-15 21:19:39'),('amela','[\"user\"]','2017-01-10 20:59:19','2017-01-15 21:19:39'),('as29','[\"user\"]','2017-01-11 19:41:42','2017-01-11 19:41:42'),('assada','[\"user\"]','2017-01-14 14:25:06','2017-01-14 14:25:06'),('assadaw','[\"user\"]','2017-01-15 21:16:51','2017-01-15 21:16:51');
 /*!40000 ALTER TABLE `acl_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -334,4 +332,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-01-14 18:44:18
+-- Dump completed on 2017-01-15 22:24:09

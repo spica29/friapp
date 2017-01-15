@@ -83,3 +83,56 @@
 {"level":"info","message":"GET all dogs request","timestamp":"7:50:10 PM"}
 {"level":"info","message":"GET request login","timestamp":"7:50:13 PM"}
 {"level":"info","message":"GET request login","timestamp":"7:50:16 PM"}
+{"level":"warn","message":"User is not logged in, can't view profile","timestamp":"10:09:13 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:09:15 PM"}
+{"level":"info","message":"GET request REGISTER","timestamp":"10:09:15 PM"}
+{"level":"info","message":"GET request login","timestamp":"10:09:15 PM"}
+{"level":"info","message":"GET request login","timestamp":"10:09:30 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:11:04 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:12:20 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:13:20 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:14:32 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:14:37 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:14:44 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:15:07 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:15:19 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:16:18 PM"}
+{"level":"info","message":"Get dog by id 4 route","timestamp":"10:16:20 PM"}
+{"level":"info","message":"Get dog by id 6 route","timestamp":"10:16:26 PM"}
+{"level":"info","message":"Request GET logout","timestamp":"10:16:35 PM"}
+{"level":"info","message":"GET request login","timestamp":"10:16:36 PM"}
+{"level":"info","message":"GET request REGISTER","timestamp":"10:16:41 PM"}
+{"level":"info","message":"Editing user assadaw","timestamp":"10:17:00 PM"}
+{"level":"warn","message":"No permissions to see profile","timestamp":"10:18:56 PM"}
+{"level":"warn","message":"User is not logged in, can't do logout","timestamp":"10:19:42 PM"}
+{"level":"info","message":"Request GET logout","timestamp":"10:19:42 PM"}
+{"level":"info","message":"GET request login","timestamp":"10:19:46 PM"}
+{"level":"info","message":"GET request REGISTER","timestamp":"10:19:47 PM"}
+{"level":"info","message":"GET request REGISTER","timestamp":"10:20:02 PM"}
+{"level":"info","message":"Editing user a","timestamp":"10:20:24 PM"}
+{"level":"info","message":"Editing user a","timestamp":"10:20:59 PM"}
+{"level":"info","message":"Editing user a","timestamp":"10:22:10 PM"}
+{"level":"info","message":"Editing user a","timestamp":"10:22:37 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:22:40 PM"}
+{"level":"info","message":"Get dog by id 3 route","timestamp":"10:22:42 PM"}
+{"level":"info","message":"User a has adopter a dog with id 3","timestamp":"10:22:44 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:22:49 PM"}
+{"level":"info","message":"GET request login","timestamp":"10:35:27 PM"}
+{"level":"info","message":"Request GET contact","timestamp":"10:35:33 PM"}
+{"level":"info","message":"Request GET admin panel","timestamp":"10:35:35 PM"}
+{"level":"info","message":"GET request login","timestamp":"10:36:40 PM"}
+{"level":"info","message":"Request GET admin panel","timestamp":"10:36:47 PM"}
+{"level":"info","message":"Request GET contact","timestamp":"10:38:08 PM"}
+{"level":"info","message":"GET request login","timestamp":"10:38:10 PM"}
+{"level":"info","message":"Request GET admin panel","timestamp":"10:38:14 PM"}
+{"level":"info","message":"Deleting user from database","timestamp":"10:38:16 PM"}
+{"level":"info","message":"Request GET admin panel","timestamp":"10:38:16 PM"}
+{"level":"info","message":"Request GET admin panel","timestamp":"10:39:40 PM"}
+{"level":"info","message":"Request GET admin panel","timestamp":"10:39:58 PM"}
+{"level":"info","message":"Request GET admin panel","timestamp":"10:40:05 PM"}
+{"level":"info","message":"Request GET admin panel","timestamp":"10:40:11 PM"}
+{"level":"info","message":"Request GET contact","timestamp":"10:40:15 PM"}
+{"level":"info","message":"Request GET contact","timestamp":"10:40:17 PM"}
+{"level":"info","message":"Request GET contact","timestamp":"10:40:29 PM"}
+{"level":"info","message":"GET all dogs request","timestamp":"10:40:30 PM"}
+{"level":"info","message":"Request GET admin panel","timestamp":"10:40:32 PM"}

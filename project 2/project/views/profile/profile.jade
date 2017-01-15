@@ -6,4 +6,12 @@ block profile
       img(src = userProfile.image, alt= userProfile.firstName)
       .dogInfo
         h3#nameOfUser !{userProfile.firstName} !{userProfile.lastName}
+        p Adopted dogs: 
+            if(dogs)
+                each dog in dogs
+                    br 
+                    !{dog.name} 
+                    br 
+                    img(src = dog.image, alt= dog.name)
+
 

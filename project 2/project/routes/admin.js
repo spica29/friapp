@@ -39,9 +39,10 @@ module.exports = function(app, logger) {
     acl.isAllowed(req.user.username, 'admin', 'view').then(function(allowed){
       if(allowed) 
       {
-      	models.User.delete({where: { id: req.params.id }});
-        logger.info("Deleting user from database");
-        res.redirect('/admin');
+      	models.User.destroy({where: { id: req.params.id }}).then(function(){
+          logger.info("Deleting user from database");
+          res.redirect('/admin');
+        });
       }
       else {
         logger.warn("User not allowed on admin route");
